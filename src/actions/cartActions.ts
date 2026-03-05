@@ -20,7 +20,7 @@ export async function cashOrderAction(cartId:string , shippingAddress : Shipping
 }
 export async function checkOutAction(cartId:string , shippingAddress : ShippingAddress) {
     const session = await getServerSession(authOptions);
-    const response = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=e-commerce-app-nine-rouge.vercel.app` , {
+    const response = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://e-commerce-app-nine-rouge.vercel.app/` , {
         method:'POST',
         headers:{
             token : session?.token as string,
